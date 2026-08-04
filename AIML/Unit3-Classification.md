@@ -1,4 +1,3 @@
-# Machine Learning with Business Applications
 ## Complete Study Notebook — UNIT 3
 ### Classification: Generative vs Discriminative Models, Logistic Regression, LDA
 
