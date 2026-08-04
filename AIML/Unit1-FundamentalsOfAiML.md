@@ -1,5 +1,3 @@
-# Machine Learning with Business Applications
-## Complete Study Notebook — UNIT 1
 ### Foundations: AI → ML → Learning Types → Workflow → Evaluation
 
 > **Running Example (used throughout):** A mid-sized telecom company, **AirTel-Fresh**, wants to reduce customer churn, cross-sell better, and detect fraudulent claims. We'll keep returning to this business so every abstract idea has a face.
