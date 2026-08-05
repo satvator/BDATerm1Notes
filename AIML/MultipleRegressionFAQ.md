@@ -18,6 +18,7 @@
 > $e = y-\hat y = (I-H)y$. This is just "actual minus fitted," expressed as one matrix operation for the whole dataset at once.
 
 **Q5. How is $\hat\sigma^2$ computed, and why divide by $n-p-1$ instead of $n$?**
+
 $$
 H_0:\ \beta_{\text{years}} = 0
 \quad \text{vs} \quad
@@ -30,9 +31,9 @@ $$
 0.0188 < 0.05,
 $$
 
-we reject \(H_0\).
+we reject $H_0$.
 
-**Conclusion:** **Years** is a statistically significant predictor of **sales**, after accounting for (or **holding constant**) the effect of **score**.
+**Conclusion:** **Years** is a statistically significant predictor of **sales**, after accounting for (holding constant) the effect of **score**.
 
 **Q6. Are $\hat\beta$ and $\hat\sigma^2$ biased or unbiased estimators?**
 > Both are **unbiased** estimators of the true population $\beta$ and $\sigma^2$ — meaning if you repeated the sampling-and-fitting process infinitely many times, the average of all your $\hat\beta$'s (or $\hat\sigma^2$'s) would converge exactly to the true value.
