@@ -18,7 +18,21 @@
 > $e = y-\hat y = (I-H)y$. This is just "actual minus fitted," expressed as one matrix operation for the whole dataset at once.
 
 **Q5. How is $\hat\sigma^2$ computed, and why divide by $n-p-1$ instead of $n$?**
-> $\hat\sigma^2 = \dfrac{1}{n-p-1}\sum_{i=1}^n (y_i-\hat y_i)^2$. We divide by $n-p-1$ (not $n$) because estimating $p+1$ coefficients ($\beta_0,...,\beta_p$) "uses up" $p+1$ degrees of freedom from the data — dividing by the smaller number ($n-p-1$) corrects for this and keeps $\hat\sigma^2$ an **unbiased** estimator of the true $\sigma^2$.
+$$
+H_0:\ \beta_{\text{years}} = 0
+\quad \text{vs} \quad
+H_1:\ \beta_{\text{years}} \neq 0
+$$
+
+Since
+
+$$
+0.0188 < 0.05,
+$$
+
+we reject \(H_0\).
+
+**Conclusion:** **Years** is a statistically significant predictor of **sales**, after accounting for (or **holding constant**) the effect of **score**.
 
 **Q6. Are $\hat\beta$ and $\hat\sigma^2$ biased or unbiased estimators?**
 > Both are **unbiased** estimators of the true population $\beta$ and $\sigma^2$ — meaning if you repeated the sampling-and-fitting process infinitely many times, the average of all your $\hat\beta$'s (or $\hat\sigma^2$'s) would converge exactly to the true value.
