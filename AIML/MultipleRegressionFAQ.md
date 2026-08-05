@@ -19,21 +19,34 @@
 
 **Q5. How is $\hat\sigma^2$ computed, and why divide by $n-p-1$ instead of $n$?**
 
-$$
-H_0:\ \beta_{\text{years}} = 0
-\quad \text{vs} \quad
-H_1:\ \beta_{\text{years}} \neq 0
-$$
-
-Since
+The true error variance, $\sigma^2$, is unknown, so we estimate it using the **Residual Sum of Squares (SSE)**:
 
 $$
-0.0188 < 0.05,
+\hat{\sigma}^2 = \frac{SSE}{n-p-1}
+= \frac{\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}{n-p-1}
 $$
 
-we reject $H_0$.
+where:
 
-**Conclusion:** **Years** is a statistically significant predictor of **sales**, after accounting for (holding constant) the effect of **score**.
+- $SSE = \sum_{i=1}^{n}(y_i-\hat{y}_i)^2$ is the **Residual Sum of Squares**.
+- $n$ is the number of observations.
+- $p$ is the number of predictors (excluding the intercept).
+
+We divide by **$n-p-1$** instead of **$n$** because estimating the regression model requires estimating **$p+1$ parameters**:
+
+- 1 intercept ($\beta_0$)
+- $p$ regression coefficients ($\beta_1, \beta_2, \ldots, \beta_p$)
+
+Each estimated parameter uses one degree of freedom. Therefore, after estimating these parameters, only
+
+$$
+n-(p+1)=n-p-1
+$$
+
+degrees of freedom remain for estimating the error variance.
+
+Dividing by $n-p-1$ makes $\hat{\sigma}^2$ an **unbiased estimator** of the true error variance $\sigma^2$. If we divided by $n$, we would systematically **underestimate** the error variance because we would ignore the degrees of freedom consumed in estimating the regression coefficients.
+
 
 **Q6. Are $\hat\beta$ and $\hat\sigma^2$ biased or unbiased estimators?**
 > Both are **unbiased** estimators of the true population $\beta$ and $\sigma^2$ — meaning if you repeated the sampling-and-fitting process infinitely many times, the average of all your $\hat\beta$'s (or $\hat\sigma^2$'s) would converge exactly to the true value.
@@ -79,8 +92,22 @@ Scan the original data: `years = (10,8,5,5,7,3,1,1)`, `score = (9,10,7,8,4,5,4,1
 $$ \hat\beta_1 = 3.736, \qquad SE(\hat\beta_1) = 1.092 $$
 
 ### Q5. What hypothesis does the p-value 0.0188 (for years) correspond to?
-$$ H_0: \beta_{\text{years}} = 0 \quad \text{vs} \quad H_1: \beta_{\text{years}} \neq 0 $$
-Since $0.0188 < 0.05$, we **reject $H_0$** — years is a statistically significant predictor of sales, holding score fixed.
+
+$$
+H_0:\ \beta_{\text{years}} = 0
+\quad \text{vs} \quad
+H_1:\ \beta_{\text{years}} \neq 0
+$$
+
+Since
+
+$$
+0.0188 < 0.05,
+$$
+
+we reject $H_0$.
+
+**Conclusion:** **Years** is a statistically significant predictor of **sales**, after accounting for (holding constant) the effect of **score**.
 
 ### Q6. At α = 0.05, what is the critical t-value, and the 95% CI for $\beta_1$?
 Degrees of freedom $= n-p-1 = 8-2-1 = 5$. Two-tailed critical value: $t_{0.025,5} = 2.571$.
