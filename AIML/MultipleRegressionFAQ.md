@@ -84,9 +84,37 @@ This is asking for the **Adjusted R²** — R² as computed is a *sample* statis
 $$ \text{Adjusted } R^2 = 0.9401 $$
 
 ### Q10. What hypothesis does the F-statistic test, and what's the critical value?
-$$ H_0: \beta_{\text{years}} = \beta_{\text{score}} = 0 \quad \text{(neither predictor helps — model is no better than just guessing the mean)} $$
-$$ H_1: \text{at least one } \beta_j \neq 0 $$
-Critical value: $F_{0.05,\,2,\,5} \approx 5.79$. Since the observed $F = 55.94 \gg 5.79$ (and p-value = 0.0003784 $\ll$ 0.05), we **reject $H_0$** — the model as a whole is statistically significant.
+$$
+H_0:\ \beta_{\text{years}} = \beta_{\text{score}} = 0
+\quad
+\text{(Neither predictor helps — the model is no better than simply predicting the mean.)}
+$$
+
+$$
+H_1:\ \text{At least one } \beta_j \neq 0
+$$
+
+**Critical value:**
+
+$$
+F_{0.05,\;2,\;5} \approx 5.79
+$$
+
+Since the observed
+
+$$
+F = 55.94 \gg 5.79
+$$
+
+and the p-value is
+
+$$
+0.0003784 \ll 0.05,
+$$
+
+we reject \(H_0\).
+
+**Conclusion:** The regression model as a whole is statistically significant. This means that **at least one of the predictors ("years" or "score") contributes significantly to predicting the response variable**, and the model performs **significantly better than simply predicting the mean** for every observation.
 
 ---
 
