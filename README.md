@@ -10,7 +10,7 @@ This repository serves as a comprehensive, open-access knowledge base designed t
 
 | Subject / Course | Folder | Topics Covered | Key Deliverables |
 |---|---|---|---|
-| **Machine Learning with Business Applications (MLBA)** | [`/MLBA`](./MLBA/README.md) | Supervised/Unsupervised Learning, Regression, Classification, Clustering ($k$-Means, Hierarchical), PCA, Association Rules (Apriori), Model Evaluation & Data Leakage | Master Theory & Exam Manual |
+| **Applied Artificial Intelligence & Machine Learning (AAIML)** | [`/MLBA`](./MLBA/README.md) | Supervised/Unsupervised Learning, Regression, Classification, Clustering ($k$-Means, Hierarchical), PCA, Association Rules (Apriori), Model Evaluation & Data Leakage | Master Theory & Exam Manual |
 | **Data Mining & Interpretation (DMIQ)** | *(In Progress)* | Data Ingestion, Missing Value Treatment, Outlier Capping, Feature Scaling, Discretization, Categorical Encoding, Train-Test Splitting | Practical Lab Manual & Cheat Sheet |
 
 ---
