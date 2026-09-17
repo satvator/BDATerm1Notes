@@ -1,7 +1,3 @@
-Now let me read the remaining chapters.Now the two additional-topic PDFs.Alright, I've gone through all six PDFs thoroughly — Chapter 2, Chapter 3, Chapter 4, and the three Chapter 5 materials (AI Tools, Data Integration, Data Querying). Here's the complete exam-prep writeup, chapter by chapter, in your framework.
-
----
-
 # CHAPTER 2 — Data Extraction, Cleansing, Missing Values, Outliers & Transformation
 
 ## Q: Data Extraction — Meaning, Sources, Types, Tools and Rules
